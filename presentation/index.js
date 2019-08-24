@@ -7,6 +7,7 @@ import {
   Heading, Image, Layout, Link, ListItem, List, Quote, Slide, SlideSet,
   TableBody, TableHeader, TableHeaderItem, TableItem, TableRow, Table, Text
 } from "spectacle";
+import { BrowserRouter } from 'react-router-dom'
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -86,6 +87,7 @@ const theme = createTheme({
 export default WithSlidesLink(class Presentation extends React.Component {
   render() {
     return (
+        <BrowserRouter basename ="/directory-name">
       <Deck transition={["zoom", "slide"]} theme={theme} transitionDuration={500}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="black">
@@ -923,6 +925,7 @@ const styles = StyleSheet.create({
           </Heading>
         </Slide>
       </Deck>
+        </BrowserRouter>
     );
   }
 });
