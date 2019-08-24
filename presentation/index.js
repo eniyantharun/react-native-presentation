@@ -87,7 +87,7 @@ const theme = createTheme({
 export default WithSlidesLink(class Presentation extends React.Component {
   render() {
     return (
-        <BrowserRouter basename ="/directory-name">
+        <BrowserRouter basename ="/presentation">
       <Deck transition={["zoom", "slide"]} theme={theme} transitionDuration={500}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="black">
